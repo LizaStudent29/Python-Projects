@@ -1,4 +1,3 @@
-
 import subprocess
 
 # Переключаемся на ветку dev
@@ -13,10 +12,10 @@ subprocess.run(['git', 'checkout', 'prd'])
 subprocess.run(['git', 'merge', latest_commit])
 
 # Устанавливаем тег для ревизии
-tag_name = 'release-1.0'  # Замените на желаемое имя тега
+tag_name = 'release-1.0'  
 subprocess.run(['git', 'tag', tag_name])
 
-# Переключаемся обратно на ветку dev (по желанию)
+# Переключаемся обратно на ветку dev
 subprocess.run(['git', 'checkout', 'dev'])
 
 print(f'Перенесено ветку dev в prd с тегом {tag_name}')
